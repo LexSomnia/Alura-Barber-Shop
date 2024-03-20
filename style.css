@@ -1,0 +1,320 @@
+body {
+  /*CSS Google API font*/
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/*Estilos para el header: logo y nav bar*/
+
+header {
+  background-color: #bbbbbb;
+  padding: 20px;
+}
+
+.caja {
+  width: 940px; /*resolucion con base a 1280px,comun de pantallas*/
+  position: relative;
+  margin: 0 auto; /*configuracion para que el navegador sea responsiva a la resolucion del usuario */
+}
+
+nav {
+  position: absolute;
+  top: 110px;
+  right: 0;
+}
+
+nav li {
+  display: inline;
+  margin: 0 0 0 15px; /*arriba, derecha, abajo, izquierda*/
+}
+
+nav a {
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #c78c19;
+  text-decoration: underline;
+}
+
+/*Estilos de productos.html*/
+.productos {
+  width: 940px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.productos li {
+  display: inline-block;
+  text-align: center;
+  width: 30%; /*30% x 3 = 90 y 9 + 90 = 99% de los pixeles establecidos arriba (940px)*/
+  vertical-align: top;
+  /*background-color: #cccccc;*/
+  margin: 0 1.5%; /*1.5 x 6 (cada espacio de los items tiene 2, y 2x3 items = 6) = 9*/
+  padding: 30px 20px;
+  box-sizing: border-box; /*tamaño de la caja: el borde de cada box*/
+  border: 2px solid #000000; /*width, style, color */
+
+  border-radius: 10px; /*Si solo escribo un valor para border radius- aplicara lo mismo para los 4 puntos*/
+
+  /*border-radius: 10px 25px 40px 50px;*/ /*Esto hace lo mismo que el sig. bloque de codigo comentado*/
+
+  /*border-top-left-radius: 10px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 50px;*/
+}
+
+.productos li:hover {
+  border-color: #c78c19;
+}
+
+.productos li:active {
+  border-color: #088c19;
+}
+
+.productos h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.productos li:hover h2 {
+  font-size: 33px;
+}
+
+.producto-descripcion {
+  font-size: 18px;
+}
+
+.producto-precio {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/*Estilos para el pie de pagina*/
+footer {
+  text-align: center;
+  background: url(imagenes/bg.jpg);
+  padding: 40px;
+}
+
+.copyright {
+  color: #ffffff;
+  font-size: 13px;
+  font-family: Consolas, monospace; /* Fuente */
+  font-weight: bold; /* Negrita */
+  margin: auto;
+}
+
+/*Estilos para contacto.html*/
+
+form {
+  margin: 40px 0; /*40 arriba y abajo, 0 para la izquierda y derecha*/
+}
+
+form label,
+form legend {
+  display: block;
+  font-size: 18px;
+  margin: 0 0 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif,
+    monospace; /* Fuente */
+  font-weight: bold; /* Negrita */
+}
+
+.input-padron {
+  display: block;
+  margin: 0 0 20px;
+  padding: 10px 25px;
+  width: 50%;
+}
+
+.checkbox {
+  margin: 20px 0;
+}
+
+/*Jerarquia CSS: inline -> ID -> class -> etiqueta*/
+
+.enviar {
+  width: 40%;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: orange;
+  border: none;
+  border-radius: 5px;
+  transition: 1s all; /* transiciona al hover en 1 segundo el background*/
+  cursor: pointer;
+}
+
+.enviar:hover {
+  background: darkorange;
+  transform: scale(1.2);
+}
+
+table {
+  margin: 40px 40px;
+}
+
+thead {
+  background: #555555;
+  color: white;
+  font-weight: bold;
+}
+
+td,
+th {
+  border: 1px solid #000000;
+  padding: 8px 15px;
+}
+
+/*Estilos para home, o index.html*/
+
+/*main > p {
+  /*Seleccioname solo los parrafos que son hijos del main*/
+
+/*Jerarquia: elemento > hijo
+  background: red;
+}*/
+
+/*img + p {
+  /*seleccioname el primer parrafo que viene despues de una imagen
+  background: yellow;
+}
+
+img ~ p {
+  /*Aplicame a todos los parrafos que vienen despues de una imagen lo siguiente
+  background: green;
+}
+
+.principal p:not(#mision) {
+  /*Aplicale a todos los parrafos menos al parrafo de "mision" 
+  background: orange;
+}*/
+
+.principal {
+  padding: 3em 0;
+  background: #ffffff;
+  width: 940px; /*Valor muy comun para centralizar algo, buena practica web*/
+  margin: 0 auto;
+}
+
+.banner {
+  width: 100%;
+}
+
+.titulo-principal {
+  text-align: center;
+  font-size: 2em; /* 2 veces el tamaño por defecto la fuente del navegador*/
+  margin: 0 0 1em;
+  clear: left; /*Cualquier configuración a la derecha del texto, limpiala*/
+}
+
+.principal p {
+  margin: 0 0 1em;
+}
+
+.principal strong {
+  font-weight: bold;
+}
+
+.principal em {
+  font-style: italic;
+}
+
+.utensilios {
+  width: 120px;
+  float: left; /*float: colocar el elemtno en la lateral de nuestra página y dejar los otros elementos al rededor de él*/
+  margin: 0 20px 20px 0; /*Siempre a las manecillas del reloj*/
+}
+
+.mapa {
+  padding: 3em 0;
+  background: linear-gradient(#fefefe, #888888); /*Efectvo de degradado*/
+}
+
+.mapa p {
+  margin: 0 0 2em;
+  text-align: center;
+}
+
+.mapa-contenido {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.diferenciales {
+  padding: 3em 0;
+  background: #888888;
+  /*box-shadow: inset 0 0 30px red;*/
+}
+
+.contenido-diferenciales {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.lista-diferenciales {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.items {
+  line-height: 1.5; /*1 + 50% del tamaño del padron*/
+}
+
+.items:before {
+  content: "★ ";
+}
+
+.items:first-child {
+  font-weight: bold;
+}
+
+.imagen-diferenciales {
+  width: 60%;
+  transition: 400ms;
+  box-shadow: 10px 10px 30px 15px #000000;
+}
+
+.imagen-diferenciales:hover {
+  opacity: 0.3;
+}
+
+.youtube-video {
+  width: 560px;
+  margin: 1em auto;
+}
+
+@media screen and (max-width: 480px) {
+  /*condiciones de formato*/
+  h1 {
+    text-align: center;
+  }
+
+  nav {
+    position: static;
+  }
+
+  .caja,
+  .principal,
+  .mapa-contenido,
+  .contenido-diferenciales,
+  .youtube-video {
+    width: auto;
+  }
+
+  .lista-diferenciales,
+  .imagen-diferenciales {
+    width: 100%;
+  }
+}
